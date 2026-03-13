@@ -93,10 +93,9 @@
     }
     .origin-body {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 1.5rem 2rem;
     }
-    @media (max-width: 640px) { .origin-body { grid-template-columns: 1fr; } }
     .origin-col-label {
       font-size: .7rem;
       font-weight: 700;
@@ -223,30 +222,20 @@
         <div class="origin-wrap">
           <div class="origin-kicker">🚀 The Story</div>
           <div class="origin-headline">Built from scratch. Not a single line of code written by hand.</div>
-          <div class="origin-sub">What started as a personal backtesting tool grew into an 18-page suite of investment analytics — every line of backend, frontend, database, auth, and deployment written entirely by AI. The builder directed. The AI coded.</div>
+          <div class="origin-sub">Every line — backend, frontend, database, auth, and deployment — written entirely by AI. The builder directed. The AI coded. What it became is something most investment platforms still don't offer.</div>
           <div class="origin-body">
             <div>
-              <div class="origin-col-label">What it does</div>
+              <div class="origin-col-label">What makes this different</div>
               <ul class="origin-list">
-                <li>📊 Asset Allocation Simulator — backtest any ETF/stock mix on real Yahoo Finance + FRED data</li>
-                <li>📉 Worst 5-year crash periods since 1871 — plus 2-year recovery data that followed each crash</li>
-                <li>🎲 Monte Carlo: 1,000 block-bootstrap trials from real Shiller data</li>
-                <li>📅 Best &amp; worst single years and months in S&amp;P 500 history</li>
-                <li>📈 Sector correlation, drawdown, rotation, dividend growth — all interactive</li>
-              </ul>
-            </div>
-            <div>
-              <div class="origin-col-label">The stack</div>
-              <ul class="origin-list">
-                <li>→ Python / FastAPI / PostgreSQL on Railway</li>
-                <li>→ Vanilla JS + custom Canvas charts (no frameworks, no build tools)</li>
-                <li>→ Auth0 for optional sign-in + saved simulations</li>
-                <li>→ 150+ years of Shiller data powering 8 of the analytics tools</li>
+                <li>💡 <strong>Most tools give you a point-in-time answer.</strong> Enter a lump sum today, get an expected return. That's not how most people invest — we invest monthly, in small amounts, over years. This platform shows you exactly how those regular investments accumulate over time, month by month, dollar by dollar.</li>
+                <li>🌍 <strong>Historical scenario investing — through real world events.</strong> Most platforms don't let you test what your portfolio would have looked like through the 2008 crash, the dot-com bust, or the Great Depression. We do. You pick the years, set a monthly amount, and see the real historical outcome — not a model, not a projection. Actual data going back to 1871, powered by the Robert Shiller dataset from Yale Economics.</li>
+                <li>🔄 <strong>Flexible by design.</strong> Want to simulate a lump sum with no monthly additions? Start with a beginning balance and set monthly to zero — you get the same point-in-time view as any other tool. Want to see the real power of dollar cost averaging through a crash? Add a monthly amount and watch how consistent investing smooths out market gyrations and often comes out ahead.</li>
+                <li>📊 <strong>Beyond just returns.</strong> See sector correlation, drawdown depth, dividend growth, crash recovery timelines, and Monte Carlo probability bands — tools that institutional investors use, now available for everyone, free.</li>
               </ul>
             </div>
           </div>
           <div class="origin-rule">
-            <strong>The rule every simulation follows:</strong> portfolios buy at the monthly <strong>HIGH</strong> price. Worst-case entry, every month. No cherry-picking. So when the numbers look good, you can trust them.
+            <strong>The rule every simulation follows:</strong> portfolios buy at the monthly <strong>HIGH</strong> price — worst-case entry, every month. No cherry-picking. So when the numbers look good, you can trust them.
           </div>
         </div>
       </div>
