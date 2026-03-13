@@ -34,23 +34,6 @@
   <link rel="stylesheet" href="shared.css" />
   <script src="theme-toggle.js"></script>
   <style>
-    .stat-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin: 2.5rem 0;
-    }
-    @media (max-width: 600px) { .stat-strip { grid-template-columns: 1fr; } }
-    .stat-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      text-align: center;
-    }
-    .stat-num { font-size: 2rem; font-weight: 700; color: var(--accent); letter-spacing: -.02em; }
-    .stat-lbl { font-size: .78rem; color: var(--text2); margin-top: .2rem; }
-
     .section { margin: 3.5rem 0; }
 
     /* ── origin story section ── */
@@ -201,28 +184,12 @@
         </div>
       </div>
 
-      <!-- stat strip -->
-      <div class="stat-strip">
-        <div class="stat-card">
-          <div class="stat-num">150+</div>
-          <div class="stat-lbl">Years of S&amp;P 500 data (1871–today)</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">18</div>
-          <div class="stat-lbl">Free financial tools, no login required</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">1,000</div>
-          <div class="stat-lbl">Monte Carlo trials per simulation run</div>
-        </div>
-      </div>
-
       <!-- origin story -->
       <div class="section">
         <div class="origin-wrap">
           <div class="origin-kicker">🚀 The Story</div>
           <div class="origin-headline">Built from scratch. Not a single line of code written by hand.</div>
-          <div class="origin-sub">Every line — backend, frontend, database, auth, and deployment — written entirely by AI. The builder directed. The AI coded. What it became is something most investment platforms still don't offer.</div>
+          <div class="origin-sub">Every line — backend, frontend, database, auth, and deployment — written entirely by AI. The builder directed. The AI coded. What it became is something most investment platforms still don't offer: a free, no-login suite of financial tools built on over 150 years of real market data, from January 1871 to today.</div>
           <div class="origin-body">
             <div>
               <div class="origin-col-label">What makes this different</div>
@@ -230,7 +197,8 @@
                 <li>💡 <strong>Most tools give you a point-in-time answer.</strong> Enter a lump sum today, get an expected return. That's not how most people invest — we invest monthly, in small amounts, over years. This platform shows you exactly how those regular investments accumulate over time, month by month, dollar by dollar.</li>
                 <li>🌍 <strong>Historical scenario investing — through real world events.</strong> Most platforms don't let you test what your portfolio would have looked like through the 2008 crash, the dot-com bust, or the Great Depression. We do. You pick the years, set a monthly amount, and see the real historical outcome — not a model, not a projection. Actual data going back to 1871, powered by the Robert Shiller dataset from Yale Economics.</li>
                 <li>🔄 <strong>Flexible by design.</strong> Want to simulate a lump sum with no monthly additions? Start with a beginning balance and set monthly to zero — you get the same point-in-time view as any other tool. Want to see the real power of dollar cost averaging through a crash? Add a monthly amount and watch how consistent investing smooths out market gyrations and often comes out ahead.</li>
-                <li>📊 <strong>Beyond just returns.</strong> See sector correlation, drawdown depth, dividend growth, crash recovery timelines, and Monte Carlo probability bands — tools that institutional investors use, now available for everyone, free.</li>
+                <li>🎲 <strong>Probability, not just a single outcome.</strong> The Monte Carlo simulator runs 1,000 independent trials drawn from 150 years of Shiller return history, giving you realistic probability bands — P10 to P90 — so you can see the full range of what your portfolio might do, not just the average.</li>
+                <li>📊 <strong>Beyond just returns.</strong> See sector correlation, drawdown depth, dividend growth, crash recovery timelines, and the worst 5-year stretches in market history and what followed — tools that institutional investors use, now available for everyone, completely free.</li>
               </ul>
             </div>
           </div>
