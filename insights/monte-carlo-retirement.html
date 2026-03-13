@@ -61,56 +61,56 @@
 
       <div class="article-body">
 
-        <p>Retirement planning is fundamentally a probability problem. You need your portfolio to last 25–35 years through market conditions you cannot predict. The question isn't whether you'll have enough money on average — it's whether you'll have enough money in the scenarios where things don't go as planned.</p>
+        <p>Retirement planning is fundamentally a probability problem. You need your portfolio to last 25–35 years through market conditions you cannot predict. The question is not whether you will have enough money on average - it is whether you will have enough money in the scenarios where things do not go as planned.</p>
 
-        <p>Monte Carlo simulation is the right tool for this problem. Instead of projecting a single return assumption into the future, it runs hundreds or thousands of scenarios drawn from real historical market behavior, then shows you the distribution of outcomes. The question isn't "what happens if markets return 7% a year?" — it's "across 1,000 different possible market environments drawn from history, how many times does your portfolio survive?"</p>
+        <p>Monte Carlo simulation is the right tool for this problem. Instead of projecting a single return assumption into the future, it runs hundreds or thousands of scenarios drawn from real historical market behavior, then shows you the distribution of outcomes. The question shifts from "what if markets return 7% a year?" to "across 1,000 different historical market environments, how many times does your portfolio survive?"</p>
 
         <h2>How Our Monte Carlo Works</h2>
 
-        <p>Our simulator uses a method called block-bootstrap sampling from the Robert Shiller dataset — 150+ years of monthly nominal total returns from 1871 to today.</p>
+        <p>Our simulator uses a method called block-bootstrap sampling from the Robert Shiller dataset - 150+ years of monthly nominal total returns from 1871 to today.</p>
 
-        <p>Instead of randomly drawing individual months (which would destroy realistic market cycle structure), we draw random blocks of consecutive returns. A 3-year block means the simulator picks a random 3-year window from history and plays it forward. This preserves the autocorrelation of market returns — the way that bad years tend to cluster and good years tend to follow bad ones — which makes the simulation more realistic than simple random sampling.</p>
+        <p>Instead of randomly drawing individual months (which would destroy realistic market cycle structure), we draw random blocks of consecutive returns. A 3-year block means the simulator picks a random 3-year window from history and plays it forward. This preserves the autocorrelation of market returns - the way that bad years tend to cluster and good years tend to follow bad ones - which makes the simulation more realistic than simple random sampling.</p>
 
         <div class="data-callout">
-          <strong>Why this matters:</strong> If you randomly shuffle individual monthly returns, you get a sequence where a catastrophic crash is immediately followed by a boom, then another crash, with no structural relationship between periods. Real markets don't work that way. Block-bootstrap sampling preserves these relationships.
+          <strong>Why this matters:</strong> If you randomly shuffle individual monthly returns, you get a sequence where a catastrophic crash is immediately followed by a boom, then another crash, with no structural relationship between periods. Real markets do not work that way. Block-bootstrap sampling preserves these relationships.
         </div>
 
         <h2>The Variables That Actually Drive Ruin Risk</h2>
 
         <h3>Withdrawal Rate: The Most Important Variable</h3>
-        <p>The financial planning community has long used the "4% rule" as a guideline — withdraw 4% of your initial portfolio per year, and historical data suggests your portfolio survives most 30-year periods. This rule came from William Bengen's 1994 research on historical withdrawal rates.</p>
+        <p>The financial planning community has long used the "4% rule" as a guideline - withdraw 4% of your initial portfolio per year, and historical data suggests your portfolio survives most 30-year periods. This rule came from William Bengen's 1994 research on historical withdrawal rates.</p>
 
-        <p>But the 4% rule was calibrated on post-WWII US market data. When you extend the dataset back to 1871 and run 1,000 block-bootstrap simulations, the picture is more nuanced. At 4% withdrawal, ruin rates over 30 years hover in a range that most investors would find acceptably low — but not zero. At 5%, ruin rates climb meaningfully. At 3%, portfolio survival becomes almost certain across all historical scenarios.</p>
+        <p>But the 4% rule was calibrated on post-WWII US market data. When you extend the dataset back to 1871 and run 1,000 block-bootstrap simulations, the picture is more nuanced. At 4% withdrawal, ruin rates over 30 years hover in a range that most investors would find acceptably low - but not zero. At 5%, ruin rates climb meaningfully. At 3%, portfolio survival becomes almost certain across all historical scenarios.</p>
 
         <h3>Sequence of Returns Risk</h3>
-        <p>The single biggest factor determining whether a retirement portfolio survives isn't the average return over 30 years — it's the sequence of returns in the early years. A portfolio that experiences a major crash in years 1–5 of retirement faces a compounding problem: you're withdrawing assets that have already been depleted, leaving fewer shares to participate in the eventual recovery.</p>
+        <p>The single biggest factor determining whether a retirement portfolio survives is not the average return over 30 years - it is the sequence of returns in the early years. A portfolio that experiences a major crash in years 1–5 of retirement faces a compounding problem: you are withdrawing assets that have already been depleted, leaving fewer shares to participate in the eventual recovery.</p>
 
-        <p>This is why two investors with identical 30-year average returns can have dramatically different outcomes depending on whether the bad years came early or late. The Monte Carlo simulation captures this by running sequences where crashes hit early, late, and everywhere in between — giving you a realistic view of how catastrophic the bad sequence scenarios actually are.</p>
+        <p>This is why two investors with identical 30-year average returns can have dramatically different outcomes depending on whether the bad years came early or late. The Monte Carlo simulation captures this by running sequences where crashes hit early, late, and everywhere in between - giving you a realistic view of how catastrophic the bad sequence scenarios actually are.</p>
 
         <h3>Contributions vs. Withdrawals</h3>
-        <p>A key insight from the simulation: even small continued contributions in early retirement dramatically reduce ruin risk. Part-time income, rental income, or delayed Social Security — anything that reduces net withdrawal in the first decade of retirement compounds favorably through the entire horizon. The math here is stark. Reducing net withdrawals by even $500/month for the first 5 years can be equivalent to having $75,000 more in starting capital from a ruin-rate perspective.</p>
+        <p>A key insight from the simulation: even small continued contributions in early retirement dramatically reduce ruin risk. Part-time income, rental income, or delayed Social Security - anything that reduces net withdrawal in the first decade of retirement compounds favorably through the entire horizon. The math here is stark. Reducing net withdrawals by even $500/month for the first 5 years can be equivalent to having $75,000 more in starting capital from a ruin-rate perspective.</p>
 
         <h2>What 1,000 Simulations Show</h2>
 
-        <p>The fan chart our simulator produces — showing P10 through P90 bands across your chosen horizon — tells you something more useful than any single projection: the realistic spread of outcomes you should be planning for.</p>
+        <p>The fan chart our simulator produces - showing P10 through P90 bands across your chosen horizon - tells you something more useful than any single projection: the realistic spread of outcomes you should be planning for.</p>
 
-        <p>The P10 line is your "things go badly" scenario. If your portfolio survives to your target date in the P10 simulation, you've stress-tested against nearly the worst history has to offer. The P50 is the median — half of all simulated paths end above this line, half below. The P90 is the optimistic scenario where markets cooperate.</p>
+        <p>The P10 line is your "things go badly" scenario. If your portfolio survives to your target date in the P10 simulation, you have stress-tested against nearly the worst history has to offer. The P50 is the median - half of all simulated paths end above this line, half below. The P90 is the optimistic scenario where markets cooperate.</p>
 
-        <p>Sound retirement planning means your P10 scenario is still acceptable — not comfortable, but survivable.</p>
+        <p>Sound retirement planning means your P10 scenario is still acceptable - not comfortable, but survivable.</p>
 
         <h2>The Practical Takeaway</h2>
 
-        <p>Monte Carlo isn't a crystal ball. It tells you about distributions of outcomes based on historical market behavior. Future markets could behave differently. But 150 years of data spanning depressions, world wars, pandemics, hyperinflation, and deflation is the best available evidence we have about how markets behave under stress.</p>
+        <p>Monte Carlo is not a crystal ball. It tells you about distributions of outcomes based on historical market behavior. Future markets could behave differently. But 150 years of data spanning depressions, world wars, pandemics, hyperinflation, and deflation is the best available evidence we have about how markets behave under stress.</p>
 
-        <p>The planners who use Monte Carlo simulation effectively don't use it to find the single "right" answer. They use it to understand the tradeoffs: what withdrawal rate balances income needs against ruin risk? How much does delaying retirement by 2 years change the probability of portfolio survival? What happens to ruin risk if I have a one-time large expense in year 10?</p>
+        <p>Monte Carlo is not most useful as a predictor - it is most useful as a way to understand tradeoffs. What withdrawal rate balances income needs against ruin risk? How much does delaying retirement by 2 years change the probability of portfolio survival? What happens to ruin risk if there is a one-time large expense in year 10?</p>
 
-        <p>These are questions that a simple average-return projection cannot answer. Monte Carlo can — and the answers are almost always more sobering and more useful than the projection.</p>
+        <p>These are questions that a simple average-return projection cannot answer. Monte Carlo can - and the answers are almost always more sobering and more useful than the projection.</p>
 
       </div>
 
       <div class="tool-cta">
         <h3>🎲 Run Your Own Monte Carlo Simulation</h3>
-        <p>Set your starting amount, monthly contributions or withdrawals, and time horizon. See 1,000 simulated paths from real Shiller data — with ruin rate tracking and percentile fan chart. No sign-up required.</p>
+        <p>Set your starting amount, monthly contributions or withdrawals, and time horizon. See 1,000 simulated paths from real Shiller data - with ruin rate tracking and percentile fan chart.</p>
         <a href="https://investsim.claritycapitaltools.com/montecarlo.html" class="btn btn-primary">Open the Monte Carlo Simulator →</a>
       </div>
 
