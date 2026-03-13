@@ -51,15 +51,128 @@
     .stat-num { font-size: 2rem; font-weight: 700; color: var(--accent); letter-spacing: -.02em; }
     .stat-lbl { font-size: .78rem; color: var(--text2); margin-top: .2rem; }
 
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    @media (max-width: 700px) { .features-grid { grid-template-columns: 1fr; } }
-
     .section { margin: 3.5rem 0; }
+
+    /* ── origin story section ── */
+    .origin-wrap {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem 2.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .origin-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #a78bfa, #38bdf8);
+    }
+    .origin-kicker {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--accent);
+      margin-bottom: .6rem;
+    }
+    .origin-headline {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -.02em;
+      margin-bottom: .6rem;
+    }
+    .origin-sub {
+      font-size: .9rem;
+      color: var(--text2);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+      max-width: 680px;
+    }
+    .origin-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 2rem;
+    }
+    @media (max-width: 640px) { .origin-body { grid-template-columns: 1fr; } }
+    .origin-col-label {
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text3);
+      margin-bottom: .6rem;
+    }
+    .origin-list {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+    .origin-list li {
+      font-size: .86rem;
+      color: var(--text2);
+      line-height: 1.5;
+      padding-left: .1rem;
+    }
+    .origin-rule {
+      font-size: .84rem;
+      color: var(--text2);
+      line-height: 1.6;
+      border-top: 1px solid var(--border);
+      margin-top: 1.4rem;
+      padding-top: 1rem;
+    }
+    .origin-rule strong { color: var(--text1); }
+
+    /* ── stack-earn spotlight ── */
+    .member-spotlight {
+      background: linear-gradient(135deg, rgba(99,102,241,.07) 0%, rgba(168,85,247,.07) 100%);
+      border: 1px solid rgba(99,102,241,.2);
+      border-radius: 14px;
+      padding: 1.75rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    [data-theme="dark"] .member-spotlight {
+      background: linear-gradient(135deg, rgba(99,102,241,.1) 0%, rgba(168,85,247,.1) 100%);
+      border-color: rgba(99,102,241,.3);
+    }
+    .spotlight-icon {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+    }
+    .spotlight-body { flex: 1; min-width: 220px; }
+    .spotlight-tag {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(99,102,241,.15);
+      color: #6366f1;
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-bottom: .45rem;
+    }
+    [data-theme="dark"] .spotlight-tag { color: #a5b4fc; background: rgba(99,102,241,.2); }
+    .spotlight-title { font-size: 1.1rem; font-weight: 700; margin-bottom: .35rem; }
+    .spotlight-desc { font-size: .86rem; color: var(--text2); line-height: 1.6; }
+    .spotlight-cta {
+      display: inline-block;
+      margin-top: .75rem;
+      font-size: .83rem;
+      font-weight: 600;
+      color: #6366f1;
+      text-decoration: none;
+    }
+    [data-theme="dark"] .spotlight-cta { color: #a5b4fc; }
+    .spotlight-cta:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -105,28 +218,48 @@
         </div>
       </div>
 
-      <!-- what we build -->
+      <!-- origin story -->
       <div class="section">
-        <div class="section-head">
-          <div class="section-label">What we build</div>
-          <h2>Data-Driven Tools for Everyday Investors</h2>
-          <p>No subscriptions. No paywalls. No fluff. Just tools built on real market data.</p>
+        <div class="origin-wrap">
+          <div class="origin-kicker">🚀 The Story</div>
+          <div class="origin-headline">Built from scratch. Not a single line of code written by hand.</div>
+          <div class="origin-sub">What started as a personal backtesting tool grew into an 18-page suite of investment analytics — every line of backend, frontend, database, auth, and deployment written entirely by AI. The builder directed. The AI coded.</div>
+          <div class="origin-body">
+            <div>
+              <div class="origin-col-label">What it does</div>
+              <ul class="origin-list">
+                <li>📊 DCA simulator — backtest any ETF/stock mix on real Yahoo Finance + FRED data</li>
+                <li>📉 Worst 5-year crash periods since 1871 — plus 2-year recovery data that followed each crash</li>
+                <li>🎲 Monte Carlo: 1,000 block-bootstrap trials from real Shiller data</li>
+                <li>📅 Best &amp; worst single years and months in S&amp;P 500 history</li>
+                <li>📈 Sector correlation, drawdown, rotation, dividend growth — all interactive</li>
+              </ul>
+            </div>
+            <div>
+              <div class="origin-col-label">The stack</div>
+              <ul class="origin-list">
+                <li>→ Python / FastAPI / PostgreSQL on Railway</li>
+                <li>→ Vanilla JS + custom Canvas charts (no frameworks, no build tools)</li>
+                <li>→ Auth0 for optional sign-in + saved simulations</li>
+                <li>→ 150+ years of Shiller data powering 8 of the analytics tools</li>
+              </ul>
+            </div>
+          </div>
+          <div class="origin-rule">
+            <strong>The rule every simulation follows:</strong> portfolios buy at the monthly <strong>HIGH</strong> price. Worst-case entry, every month. No cherry-picking. So when the numbers look good, you can trust them.
+          </div>
         </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <div class="feature-title">Real Historical Data</div>
-            <div class="feature-desc">Every tool runs on actual market data — S&amp;P 500 from 1871, live ETF prices, FRED federal funds rates. No synthetic data, no estimates.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🎯</div>
-            <div class="feature-title">Honest Simulations</div>
-            <div class="feature-desc">Portfolios buy at the monthly HIGH price. Whole shares only. No cherry-picked entry points. Worst-case DCA, so results are trustworthy.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🆓</div>
-            <div class="feature-title">Completely Free</div>
-            <div class="feature-desc">Every tool is free with no account required. Built as a public resource for investors who want to think for themselves.</div>
+      </div>
+
+      <!-- stack & earn spotlight -->
+      <div class="section" style="margin-top:-1rem;">
+        <div class="member-spotlight">
+          <div class="spotlight-icon">🏦</div>
+          <div class="spotlight-body">
+            <div class="spotlight-tag">✦ Member Feature</div>
+            <div class="spotlight-title">Stack &amp; Earn — Tiered Savings Calculator</div>
+            <div class="spotlight-desc">Not all savings accounts pay the same rate on every dollar. Stack &amp; Earn simulates real tiered savings with split-bucket compounding — each balance tier earns its own rate independently. Forward-simulate your savings growth, or reverse-solve: how much do you need to save monthly to hit your goal?</div>
+            <a href="https://investsim.claritycapitaltools.com/stack-earn.html" class="spotlight-cta">Try Stack &amp; Earn (free sign-in) →</a>
           </div>
         </div>
       </div>
