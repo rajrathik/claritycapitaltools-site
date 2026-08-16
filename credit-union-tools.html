@@ -35,7 +35,10 @@
   </header>
 
   <main>
-    <div class="container-narrow">
+    <!-- Same container, heading scale, intro treatment and section rhythm as
+         /investing. These two are parallel vertical pages and should read the
+         same way. -->
+    <div class="container">
 
       <div style="padding:56px 0 8px">
         <h1 style="font-size:34px;font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px">Credit Union Utilities</h1>
@@ -47,33 +50,37 @@
       </div>
 
       <!-- No utility cards yet. Nothing has been released, so nothing is listed.
-           Add one card per utility as each is actually published -- do not add
-           placeholder or forthcoming entries here. -->
-      <div class="article-cta" style="margin-top:40px">
-        <div class="tool-name">First utilities coming soon</div>
-        <div class="tool-desc">
-          Nothing has been published yet. Rather than list projects that do not exist, this page
-          stays empty until the first utility is released. Each one will get its own page here
-          explaining the problem it solves, who it is for, what it requires, and what to review
-          before use &mdash; with the source code on GitHub.
+           When the first utility ships, add a .card-grid of .tool-card entries
+           here, exactly as /investing does, and delete this placeholder block.
+           Do not add cards for utilities that do not exist. -->
+      <div style="margin-top:48px">
+        <div class="group-label">Available utilities</div>
+        <div class="tool-card" style="cursor:default">
+          <div class="tool-name">First utilities coming soon</div>
+          <div class="tool-desc">
+            Nothing has been published yet. Rather than list projects that do not exist, this page
+            stays empty until the first utility is released. Each one will get its own page here
+            explaining the problem it solves, who it is for, what it requires, and what to review
+            before use &mdash; with the source code on GitHub.
+          </div>
         </div>
       </div>
 
-      <hr class="divider" />
+      <div style="margin-top:40px">
+        <div class="group-label">What these will be</div>
+        <p style="font-size:17px;line-height:1.75;color:var(--text2);margin-bottom:16px">
+          Small, single-purpose utilities addressing ordinary problems that come up in credit union
+          technology, data and operations work &mdash; the kind of thing a team might otherwise build from
+          scratch each time. Published openly so they can be inspected, modified and run internally
+          rather than adopted as a service.
+        </p>
+        <p style="font-size:17px;line-height:1.75;color:var(--text2)">
+          Each utility will be documented here in plain terms, with the code and installation detail
+          kept on GitHub.
+        </p>
+      </div>
 
-      <h2 style="font-size:20px;font-weight:600;color:var(--text1);margin-bottom:12px">What these will be</h2>
-      <p style="font-size:16px;line-height:1.75;color:var(--text2);margin-bottom:16px">
-        Small, single-purpose utilities addressing ordinary problems that come up in credit union
-        technology, data and operations work &mdash; the kind of thing a team might otherwise build from
-        scratch each time. Published openly so they can be inspected, modified and run internally
-        rather than adopted as a service.
-      </p>
-      <p style="font-size:16px;line-height:1.75;color:var(--text2)">
-        Each utility will be documented here in plain terms, with the code and installation detail
-        kept on GitHub.
-      </p>
-
-      <div class="data-callout" style="margin-top:32px">
+      <div class="data-callout" style="margin-top:40px">
         <strong style="color:var(--text1)">Independence and review.</strong>
         These are independently published open-source utilities. They are not a product of, sponsored
         by, or endorsed by any credit union or employer. Organizations should independently review
