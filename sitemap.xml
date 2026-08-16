@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Canonical URLs only. This site serves extensionless URLs (200); the .html
-  form 307-redirects to them, so .html must never appear here.
-
-  /tools and /insights/* are redirect stubs and are deliberately absent.
+  Two pages. Extensionless URLs only -- the .html form 307-redirects.
+  /investing, /tools and /about are retired redirect stubs, deliberately absent.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://claritycapitaltools.com/</loc><lastmod>2026-08-16</lastmod><priority>1.0</priority></url>
-  <url><loc>https://claritycapitaltools.com/investing</loc><lastmod>2026-08-16</lastmod><priority>0.9</priority></url>
-  <url><loc>https://claritycapitaltools.com/credit-union-tools</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://claritycapitaltools.com/about</loc><lastmod>2026-08-16</lastmod><priority>0.6</priority></url>
+  <url><loc>https://claritycapitaltools.com/credit-union-tools</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
 </urlset>
