@@ -1,6 +1,7 @@
 /* theme-toggle.js — identical to investsim version */
 (function () {
-  var t = localStorage.getItem('theme') || 'dark';
+  /* Light by default, matching InvestSim. */
+  var t = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', t);
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.createElement('button');
